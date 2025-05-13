@@ -3,40 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Centered Checkbox Form</title>
+
+<h1>Welcome to GLS LAUNDRY</h1>
+  <br>
+  <h3>Select machine and make payment</h3>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
       padding-top: 50px;
     }
-    form {
-      display: inline-block;
-      text-align: left;
-      margin: 0 auto;
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
+
+    form {
+      text-align: left;
+    }
+
     h2, h3 {
       margin-bottom: 20px;
     }
+
     #results {
       margin-top: 20px;
     }
+
     .submit-button {
-      width: 200%;
+      width: 120%;
       padding: 10px;
-      margin-top: 10px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 18px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      margin-top: 15px;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to GLS laundy</h1>
-  <br>
-  <h3>Select machine and make payment</h3>
-  <form id="checkboxForm">
+  
+  <div class="form-container">
+    <form id="checkboxForm">
     <label><input type="checkbox" name="option" value="Option 1" onclick="onlyOne(this)"> Washer 01</label><br><br>
     <label><input type="checkbox" name="option" value="Option 2" onclick="onlyOne(this)"> Washer 02</label><br><br>
     <label><input type="checkbox" name="option" value="Option 3" onclick="onlyOne(this)"> Dryer 01</label><br><br>
@@ -44,10 +53,13 @@
 
     <button type="button" class="submit-button" onclick="submitForm()">Payment</button>
   </form>
-
-  
-  <div id="results"></div>
 <br>
+   
+</div>
+<div id="results">
+  </div>
+  <br>
+
   <script>
     const linksMap = {
       "Option 1": "https://buy.stripe.com/test_6oU00ceks6hG9mW3GcbV601",
@@ -69,7 +81,7 @@
 
       const checked = document.querySelector('input[type="checkbox"]:checked');
       if (!checked) {
-        resultsDiv.textContent = 'No option selected.';
+        resultsDiv.textContent = 'No Machine Selected !';
         return;
       }
 
