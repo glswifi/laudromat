@@ -74,18 +74,26 @@
       <label for="optionSelect1"><strong>Washer</strong></label>
       <select id="optionSelect1" onchange="clearOther('optionSelect2')">
         <option value="" disabled selected>Select one...</option>
-        <option value="Option 1">Washer 01</option>
-        <option value="Option 2">Washer 02</option>
-        <option value="Option 3">Washer 03</option>
-        <option value="Option 4">Washer 04</option>
-        <option value="Option 5">Washer 05</option>
-        <option value="Option 6">Washer 06</option>
-        <option value="Option 7">Washer 07</option>
-        <option value="Option 8">Washer 08</option>
-        <option value="Option 9">Washer 09</option>
-        <option value="Option 10">Washer 10</option>
-        <option value="Option 11">Washer 11</option>
-        <option value="Option 12">Washer 12</option>
+        <option value="Option w1">Washer 01</option>
+        <option value="Option w2">Washer 02</option>
+        <option value="Option w3">Washer 03</option>
+        <option value="Option w4">Washer 04</option>
+        <option value="Option w5">Washer 05</option>
+        <option value="Option w6">Washer 06</option>
+        <option value="Option w7">Washer 07</option>
+        <option value="Option w8">Washer 08</option>
+        <option value="Option w9">Washer 09</option>
+        <option value="Option w10">Washer 10</option>
+        <option value="Option w11">Washer 11</option>
+        <option value="Option w12">Washer 12</option>
+        <option value="Option w13">Washer 13</option>
+        <option value="Option w14">Washer 14</option>
+        <option value="Option w15">Washer 15</option>
+        <option value="Option w16">Washer 16</option>
+        <option value="Option w17">Washer 17</option>
+        <option value="Option w18">Washer 18</option>
+        <option value="Option w19">Washer 19</option>
+        <option value="Option w20">Washer 20</option>
       </select>
     </div>
 
@@ -94,18 +102,16 @@
       <label for="optionSelect2"><strong>Dryer</strong></label>
       <select id="optionSelect2" onchange="clearOther('optionSelect1')">
         <option value="" disabled selected>Select one...</option>
-        <option value="Option 13">Dryer 01</option>
-        <option value="Option 14">Dryer 02</option>
-        <option value="Option 15">Dryer 03</option>
-        <option value="Option 16">Dryer 04</option>
-        <option value="Option 17">Dryer 05</option>
-        <option value="Option 18">Dryer 06</option>
-        <option value="Option 19">Dryer 07</option>
-        <option value="Option 20">Dryer 08</option>
-        <option value="Option 21">Dryer 09</option>
-        <option value="Option 22">Dryer 10</option>
-        <option value="Option 23">Dryer 11</option>
-        <option value="Option 24">Dryer 12</option>
+        <option value="Option d1">Dryer 01</option>
+        <option value="Option d2">Dryer 02</option>
+        <option value="Option d3">Dryer 03</option>
+        <option value="Option d4">Dryer 04</option>
+        <option value="Option d5">Dryer 05</option>
+        <option value="Option d6">Dryer 06</option>
+        <option value="Option d7">Dryer 07</option>
+        <option value="Option d8">Dryer 08</option>
+        <option value="Option d9">Dryer 09</option>
+        <option value="Option d10">Dryer 10</option>
       </select>
     </div>
   </div>
@@ -120,55 +126,67 @@
   
   <script>
     const linksMap = {
-      "Option 1": "https://buy.stripe.com/test_6oU00ceks6hG9mW3GcbV601",
+      "Option w1": "https://buy.stripe.com/test_6oU00ceks6hG9mW3GcbV601",
       
-      "Option 2": "https://buy.stripe.com/test_00w14g3FObC00Qqb8EbV600",
+      "Option w2": "https://buy.stripe.com/test_00w14g3FObC00Qqb8EbV600",
       
-      "Option 3": "https://example.com/option3",
+      "Option w3": "https://example.com/option3",
       
-      "Option 4": "https://example.com/option4",
+      "Option w4": "https://example.com/option4",
       
-      "Option 5": "https://example.com/option1",
+      "Option w5": "https://example.com/option1",
       
-      "Option 6": "https://example.com/option2",
+      "Option w6": "https://example.com/option2",
       
-      "Option 7": "https://buy.stripe.com/test_6oU00ceks6hG9mW3GcbV601",
+      "Option w7": "https://buy.stripe.com/test_6oU00ceks6hG9mW3GcbV601",
       
-      "Option 8": "https://buy.stripe.com/test_00w14g3FObC00Qqb8EbV600",
+      "Option w8": "https://buy.stripe.com/test_00w14g3FObC00Qqb8EbV600",
       
-      "Option 9": "https://example.com/option3",
+      "Option w9": "https://example.com/option3",
       
-      "Option 10": "https://example.com/option4",
+      "Option w10": "https://example.com/option4",
       
-      "Option 11": "https://example.com/option1",
+      "Option w11": "https://example.com/option1",
       
-      "Option 12": "https://example.com/option2",
+      "Option w12": "https://example.com/option2",
       
-      "Option 13": "https://buy.stripe.com/test_6oU00ceks6hG9mW3GcbV601",
+      "Option w13": "https://buy.stripe.com/test_6oU00ceks6hG9mW3GcbV601",
       
-      "Option 14": "https://buy.stripe.com/test_00w14g3FObC00Qqb8EbV600",
+      "Option w14": "https://buy.stripe.com/test_00w14g3FObC00Qqb8EbV600",
       
-      "Option 14": "https://example.com/option3",
+      "Option w14": "https://example.com/option3",
       
-      "Option 15": "https://example.com/option4",
+      "Option w15": "https://example.com/option4",
       
-      "Option 16": "https://example.com/option1",
+      "Option w16": "https://example.com/option1",
       
-      "Option 17": "https://example.com/option2",
+      "Option w17": "https://example.com/option2",
       
-      "Option 18": "https://example.com/option3",
+      "Option w18": "https://example.com/option3",
       
-      "Option 19": "https://buy.stripe.com/test_00w14g3FObC00Qqb8EbV600",
+      "Option w19": "https://buy.stripe.com/test_00w14g3FObC00Qqb8EbV600",
       
-      "Option 20": "https://buy.stripe.com/test_6oU00ceks6hG9mW3GcbV601",
+      "Option w20": "https://buy.stripe.com/test_6oU00ceks6hG9mW3GcbV601",
       
-      "Option 21": "https://buy.stripe.com/test_00w14g3FObC00Qqb8EbV600",
+      "Option d1": "https://buy.stripe.com/test_6oU00ceks6hG9mW3GcbV601",
       
-      "Option 22": "https://example.com/option3",
+      "Option d2": "https://buy.stripe.com/test_00w14g3FObC00Qqb8EbV600",
       
-      "Option 23": "https://example.com/option4",
+      "Option d3": "https://example.com/option3",
       
-      "Option 24": "https://example.com/option1"
+      "Option d4": "https://example.com/option4",
+      
+      "Option d5": "https://example.com/option1",
+      
+      "Option d6": "https://example.com/option2",
+      
+      "Option d7": "https://buy.stripe.com/test_6oU00ceks6hG9mW3GcbV601",
+      
+      "Option d8": "https://buy.stripe.com/test_00w14g3FObC00Qqb8EbV600",
+      
+      "Option d9": "https://example.com/option3",
+      
+      "Option d10": "https://example.com/option4",
     };
 
     function clearOther(otherId) {
