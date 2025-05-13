@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Centered Checkbox Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    form {
+      display: inline-block;
+      text-align: left;
+      margin: 0 auto;
+    }
+    h2, h3 {
+      margin-bottom: 20px;
+    }
+    #results {
+      margin-top: 20px;
+    }
+    .submit-button {
+      width: 200%;
+      padding: 10px;
+      margin-top: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to GLS laundy</h1>
+  <br>
+  <h3>Select machine and make payment</h3>
+  <form id="checkboxForm">
+    <label><input type="checkbox" name="option" value="Option 1" onclick="onlyOne(this)"> Washer 01</label><br><br>
+    <label><input type="checkbox" name="option" value="Option 2" onclick="onlyOne(this)"> Washer 02</label><br><br>
+    <label><input type="checkbox" name="option" value="Option 3" onclick="onlyOne(this)"> Dryer 01</label><br><br>
+    <label><input type="checkbox" name="option" value="Option 4" onclick="onlyOne(this)"> Dryer 02</label><br><br>
+
+    <button type="button" class="submit-button" onclick="submitForm()">Payment</button>
+  </form>
+
+  
+  <div id="results"></div>
+<br>
+  <script>
+    const linksMap = {
+      "Option 1": "https://buy.stripe.com/test_6oU00ceks6hG9mW3GcbV601",
+      "Option 2": "https://buy.stripe.com/test_00w14g3FObC00Qqb8EbV600",
+      "Option 3": "https://example.com/option3",
+      "Option 4": "https://example.com/option4"
+    };
+
+    function onlyOne(checkbox) {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach((cb) => {
+        if (cb !== checkbox) cb.checked = false;
+      });
+    }
+
+    function submitForm() {
+      const resultsDiv = document.getElementById('results');
+      resultsDiv.innerHTML = '';
+
+      const checked = document.querySelector('input[type="checkbox"]:checked');
+      if (!checked) {
+        resultsDiv.textContent = 'No option selected.';
+        return;
+      }
+
+      const option = checked.value;
+      const link = linksMap[option];
+
+      // Display the link
+      const a = document.createElement('a');
+      a.href = link;
+      a.textContent = option + ' Link';
+      a.target = '_blank';
+      resultsDiv.appendChild(a);
+
+      // Open the link in a new tab
+      window.open(link, '_blank');
+    }
+  </script>
+</body>
+</html>
